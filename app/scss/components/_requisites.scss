@@ -1,0 +1,91 @@
+.requisites {
+  padding: 90px 0;
+  background-color: #f1f5f9;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__subtitle {
+    margin: 0 auto 80px;
+  }
+
+  &__address {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    padding-left: 25px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+    }
+    &--geo::after {
+      background-image: url("../images/icons/location.svg");
+    }
+    &--time::after {
+      background-image: url("../images/icons/time.svg");
+    }
+    &--email::after {
+      background-image: url("../images/icons/message.svg");
+    }
+  }
+
+  &__map {
+    width: 60%;
+    @include r(440) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  gap: 15px;
+
+  &__link {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__link--tg {
+    background-image: url("../../images/icons/icons-telegram.svg");
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+  }
+
+  &__link--vk {
+    background-image: url("../../images/icons/icons-vk.svg");
+  }
+}

@@ -1,0 +1,56 @@
+.vacancy {
+  padding: 90px 0 0;
+  background-color: #dceaf8;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    max-width: 500px;
+  }
+
+  &__content-descr {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  &__images {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+
+    @include r(440) {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/decor-1.png");
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../images/decor-2.png");
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

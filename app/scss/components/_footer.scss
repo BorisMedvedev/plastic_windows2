@@ -1,0 +1,58 @@
+.footer {
+  padding: 90px 0;
+  background-color: #2f80ed;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__sublitem {
+    max-width: 280px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__link-icon {
+    position: relative;
+    padding-left: 25px;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      top: 3px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--geo::after {
+      background-image: url("../images/icons/locationfff.svg");
+    }
+    &--phone::after {
+      background-image: url("../images/icons/calling.svg");
+    }
+  }
+}
+
+.social-list__link-footer--tg {
+  background-image: url("../images/icons/icons-tgfff.svg");
+  background-size: contain;
+}
+.social-list__link-footer--vk {
+  background-image: url("../images/icons/icons-vkfff.svg");
+  background-size: contain;
+}
