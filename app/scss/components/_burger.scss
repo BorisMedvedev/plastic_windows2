@@ -12,6 +12,7 @@
   width: 50px;
   display: none;
   box-shadow: -8px -6px 17px 2px rgba(0, 0, 0, 0.15);
+  z-index: 110;
 
   @include r(1024) {
     display: block;

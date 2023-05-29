@@ -310,6 +310,7 @@ modalClose.addEventListener('click', () => {
 const button = document.getElementById('menu-toggle');
 const openCubes = Array.from(document.querySelectorAll('#open-cubes rect'));
 const closeCubes = Array.from(document.querySelectorAll('#close-cubes rect'));
+const nav = document.querySelector('.nav__list');
 let locked = false;
 
 const openEffect = (cubes) => {
@@ -334,6 +335,7 @@ button.addEventListener('click', (e) => {
   if (!locked) {
     locked = true;
     button.classList.toggle('active');
+    nav.classList.toggle('active');
     const length = openCubes.length;
 
     if (button.classList.contains('active')) {
