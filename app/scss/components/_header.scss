@@ -24,11 +24,6 @@
       font-size: 16px;
     }
 
-    @include r(544) {
-      display: block;
-      margin-top: 20px;
-    }
-
     &:hover {
       background-color: #2f80ed;
       color: #fff;
