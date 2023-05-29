@@ -1,0 +1,78 @@
+.button-burger {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  cursor: pointer;
+  height: 50px;
+  outline: none;
+  position: relative;
+  width: 50px;
+  display: none;
+  box-shadow: -8px -6px 17px 2px rgba(0, 0, 0, 0.15);
+
+  @include r(1024) {
+    display: block;
+  }
+
+  &.active {
+    border-color: #2f80ed;
+    #open-cubes rect,
+    #close-cubes rect {
+      fill: #2f80ed;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    #open-cubes rect,
+    #close-cubes rect {
+      fill: #2f80ed;
+
+      transition: fill 600ms ease;
+    }
+
+    #close-cubes rect {
+      opacity: 0;
+    }
+  }
+}
+
+.spin-in {
+  animation: spin-in 1300ms ease 1 forwards 10ms;
+  transform-origin: center;
+}
+
+.spin-out {
+  animation: spin-out 1300ms ease 1 forwards 10ms;
+  transform-origin: center;
+}
+
+@keyframes spin-in {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes spin-out {
+  0% {
+    opacity: 1;
+    transform: rotate(720deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+}

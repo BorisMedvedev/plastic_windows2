@@ -15,6 +15,10 @@
     border-radius: 6px;
     transition: background-color 0.3s, color 0.3s;
 
+    @include r(1024) {
+      display: none;
+    }
+
     @include r(1200) {
       padding: 10px 15px;
       font-size: 16px;
@@ -37,15 +41,8 @@
     display: flex;
     align-items: center;
     gap: 35px;
-<<<<<<< HEAD
 
-    @include r(768) {
-=======
-    @include r(1200) {
-      gap: 15px;
-    }
     @include r(1024) {
->>>>>>> d13f7304321f8caa02b4a52d3d7e0b5104585b1c
       display: none;
     }
   }
