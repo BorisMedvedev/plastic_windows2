@@ -218,7 +218,7 @@ const modalDialog = document.getElementById('modal-dialog');
 const modalClose = document.getElementById('modal-close');
 
 const calculateWindowPrice = (height, width, isTripleGlazed, color) => {
-  const basePrice = 1800;
+  const basePrice = 5750;
   const area = height * width;
   let price = basePrice * area;
 
