@@ -40,7 +40,7 @@
 
 <body>
 <div class="site">
-  <header id="header" class="header">
+  <header id="header" class="header uc-header">
 
   <div class="container header__container">
 
@@ -808,7 +808,7 @@
     <div id="modal-content">
       <h2 class="modal__title">Предварительный Расчет стоимости окна</h2>
 
-      <button class="modal-close btn btn-info" id="modal-close">X</button>
+      <button class="modal-close btn btn-info" id="modal-close">&times;</button>
       <form class="form" action="#" id="form">
         <label class="form-label" for="height">Высота окна (м)</label>
         <input class="form-control" type="number" name="height" id="height"
@@ -823,12 +823,15 @@
           <option value="beige">Бежевый</option>
           <option value="other">Другой цвет</option>
         </select><br>
-        <input class="form-check-input" type="checkbox" name="triple-glazed"
-          id="triple-glazed">
-        <label class="form-label" class="form-check-label" for="triple-glazed">Окно
-          с тройным
-          остеклением</label><br>
-        <button class="modal__btn btn btn-primary" type="submit">Рассчитать
+        <div class="form-wrapper">
+          <input class="form-check-input" type="checkbox" name="triple-glazed"
+            id="triple-glazed">
+          <label class="form-label" class="form-check-label" for="triple-glazed">Окно
+            с тройным
+            остеклением</label>
+
+        </div>
+        <button class="modal__btn btn btn-primary btn-site" type="submit">Рассчитать
           стоимость</button>
       </form>
       <div id="result"></div>

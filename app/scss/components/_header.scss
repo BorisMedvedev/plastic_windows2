@@ -1,5 +1,10 @@
 .header {
-  padding: 40px 0;
+  padding: 20px 0;
+  background-color: #fff;
+
+  @include r(1024) {
+    padding: 10px 0;
+  }
 
   &__container {
     display: flex;
@@ -36,6 +41,7 @@
     display: flex;
     align-items: center;
     gap: 35px;
+    transition: transform 0.8s, opacity 0.5s;
 
     @include r(1024) {
       padding-top: 100px;
@@ -44,6 +50,8 @@
       left: 0;
       right: 0;
       bottom: 0;
+      height: 100vh;
+      width: 100%;
       position: absolute;
       flex-direction: column;
       align-items: center;
@@ -53,10 +61,14 @@
       font-size: 32px;
       color: #fff;
       font-weight: 700;
+      opacity: 0;
     }
+
     &.active {
       transform: translateY(0);
+      opacity: 1;
       text-align: center;
+      transition: transform 0.8s, opacity 0.5s;
     }
   }
 }
@@ -79,9 +91,10 @@
     font-family: "Exo 2";
     font-style: normal;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 13px;
     color: #2f80ed;
+    margin: 0;
   }
 }
 
@@ -91,6 +104,7 @@
   }
   @include r(1024) {
     max-width: 250px;
+    height: 50px;
   }
 }
 
@@ -113,4 +127,23 @@
   @include r(1024) {
     display: block;
   }
+}
+
+.uc-header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 120;
+  transition: opacity 0.8s, visibility 0.8s;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  filter: drop-shadow(2px 3px 4px rgb(133, 133, 133));
+}
+
+.uc-header.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

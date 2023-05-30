@@ -87,7 +87,7 @@ body.modal-open {
 
 .form {
   label {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 28px;
 
     @include r(560) {
@@ -126,8 +126,16 @@ body.modal-open {
 
 .modal-close {
   position: absolute;
-  top: 15px;
+  top: -15px;
   right: 15px;
+  background-color: transparent;
+  font-size: 48px;
+  border: none;
+  color: rgb(47, 128, 237);
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .modal__title {
@@ -182,3 +190,12 @@ input[type="number"] {
 //   border-radius: 50%;
 //   -webkit-animation: rotating 1s linear infinite;
 // }
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+
+  label {
+    font-size: 22px;
+  }
+}

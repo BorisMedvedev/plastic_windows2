@@ -358,7 +358,7 @@ button.addEventListener('click', (e) => {
 const modal = document.querySelector('.modal');
 const openButtons = document.querySelectorAll('.open-btn');
 const overlay = document.querySelector('.modal-overlay');
-const closeButtons = document.querySelectorAll('.modal-close-btn'); 
+const closeButtons = document.querySelectorAll('.modal-close-btn');
 
 const openModal = (event) => {
   event.preventDefault();
@@ -387,3 +387,34 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  let lastScroll = 0;
+  const defaultOffset = 0;
+  const header = document.querySelector('.uc-header');
+  header.classList.add('top');
+  const scrollPosition = () =>
+    window.pageXOffset || document.documentElement.scrollTop;
+  const containHide = () => header.classList.contains('hide');
+
+  window.addEventListener('scroll', () => {
+    if (
+      scrollPosition() > lastScroll &&
+      !containHide() &&
+      scrollPosition() > defaultOffset
+    ) {
+      header.classList.add('hide');
+      header.classList.add('top');
+    } else if (scrollPosition() < lastScroll && containHide()) {
+      header.classList.remove('hide');
+      header.classList.remove('top');
+    }
+
+    if (scrollPosition() === defaultOffset) {
+      header.classList.add('top');
+    }
+
+
+    lastScroll = scrollPosition();
+  });
+});
