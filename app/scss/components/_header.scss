@@ -56,20 +56,14 @@
     }
     &.active {
       transform: translateY(0);
+      text-align: center;
     }
   }
 }
 
 .phone {
   @include r(1024) {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  @include r(768) {
-    display: block;
+    display: none;
   }
 
   &__link {
@@ -94,5 +88,29 @@
 .logo {
   @include r(1200) {
     max-width: 150px;
+  }
+  @include r(1024) {
+    max-width: 250px;
+  }
+}
+
+.phone-mobail {
+  display: none;
+
+  &__btn {
+    display: block;
+    color: #2f80ed;
+  }
+
+  @include r(1024) {
+    display: block;
+  }
+}
+
+.nav__item-mobail {
+  display: none;
+
+  @include r(1024) {
+    display: block;
   }
 }

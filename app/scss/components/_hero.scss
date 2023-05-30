@@ -5,7 +5,7 @@
 
   @include r(440) {
     width: 95%;
-    height: 470px;
+    height: 360px;
   }
 
   &__content {
@@ -18,6 +18,10 @@
     @include r(768) {
       max-width: 220px;
       left: 60px;
+    }
+
+    @include r(440) {
+      top: 8px;
     }
   }
 
@@ -50,7 +54,8 @@
     bottom: 0;
 
     @include r(768) {
-      width: 60%;
+      width: 73%;
+      opacity: 0.8;
     }
   }
 }
@@ -100,6 +105,10 @@
   border-radius: 500px;
   z-index: 30;
   cursor: pointer;
+
+  @include r(560) {
+    display: none;
+  }
 }
 
 .swiper-button-next {

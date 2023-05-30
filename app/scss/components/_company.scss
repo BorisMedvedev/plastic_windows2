@@ -6,6 +6,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include r(560) {
+      justify-content: center;
+    }
   }
 
   &__title {
@@ -24,8 +28,8 @@
   }
 
   &__btn {
-    @include r(440) {
-      margin-bottom: 20px;
+    @include r(560) {
+      margin-bottom: 25px;
     }
   }
 
@@ -35,6 +39,10 @@
     gap: 25px;
     flex-wrap: wrap;
     justify-content: flex-end;
+
+    @include r(560) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -49,6 +57,10 @@
     margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
+
+    @include r(560) {
+      justify-content: center;
+    }
   }
 
   &__item-top-img {

@@ -47,7 +47,7 @@ body.modal-open {
   opacity: 0;
   pointer-events: none;
 
-  @include r(440) {
+  @include r(560) {
     padding: 15px;
   }
 }
@@ -87,9 +87,9 @@ body.modal-open {
     margin-bottom: 10px;
     font-size: 28px;
 
-    @include r(440) {
+    @include r(560) {
       margin-bottom: 5px;
-      font-size: 22px;
+      font-size: 16px;
     }
   }
 
@@ -114,10 +114,10 @@ body.modal-open {
   color: rgb(47, 128, 237);
   height: 60px;
 
-  @include r(440) {
+  @include r(560) {
     margin-top: 5px;
-    font-size: 18px;
-    height: 30px;
+    font-size: 16px;
+    height: 25px;
   }
 }
 
@@ -133,7 +133,8 @@ body.modal-open {
   font-size: 32px;
   text-align: center;
 
-  @include r(440) {
+  @include r(560) {
+    max-width: 200px;
     font-size: 18px;
   }
 }
@@ -141,7 +142,7 @@ body.modal-open {
 .modal__btn {
   margin-top: 25px;
 
-  @include r(440) {
+  @include r(560) {
     margin-top: 10px;
   }
 }

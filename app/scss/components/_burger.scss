@@ -3,15 +3,15 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: 99px;
+  border: 1px solid #2f80ed;
+  border-radius: 0;
   cursor: pointer;
   height: 50px;
   outline: none;
   position: relative;
   width: 50px;
   display: none;
-  box-shadow: -8px -6px 17px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: -8px -6px 17px 2px rgba(0, 0, 0, 0.05);
   z-index: 110;
 
   @include r(1024) {
@@ -19,7 +19,6 @@
   }
 
   &.active {
-    border-color: #2f80ed;
     #open-cubes rect,
     #close-cubes rect {
       fill: #2f80ed;
