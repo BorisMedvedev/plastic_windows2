@@ -57,7 +57,10 @@ body.modal-open {
   /* Изменяем значение свойства opacity и pointer-events */
   opacity: 1;
   pointer-events: auto;
-  width: 90%;
+
+  @include r(560) {
+    width: 100%;
+  }
 }
 
 #modal-close {

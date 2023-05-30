@@ -15,7 +15,7 @@
     flex-grow: 1;
     align-items: flex-start;
     padding: 48px 32px;
-    max-width: 416px;
+    max-width: 410px;
     background-color: #dceaf8;
     border-radius: 20px;
   }
@@ -46,6 +46,10 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 130%;
+
+    @include r(440) {
+      font-size: 20px;
+    }
   }
 
   &__descr {
@@ -60,6 +64,10 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 100%;
+
+    @include r(440) {
+      font-size: 26px;
+    }
   }
 
   &__link {
