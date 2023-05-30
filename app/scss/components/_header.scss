@@ -48,14 +48,14 @@
       flex-direction: column;
       align-items: center;
       z-index: 99;
-      transform: translateX(200%);
+      transform: translateY(-200%);
       transition: transform 0.8s;
       font-size: 32px;
       color: #fff;
       font-weight: 700;
     }
     &.active {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 }
