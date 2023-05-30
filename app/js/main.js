@@ -1,7 +1,8 @@
 // document.addEventListener('DOMContentLoaded', () => {
 //   const navigation = () => {
 //     const anchors = document.querySelectorAll(
-//         '.nav__link, .logo-footer, .hero__link, .aside__btn, .tabs-block__btn',
+//         '.nav__link, .logo-footer, .hero__link,
+// .aside__btn, .tabs-block__btn',
 //     );
 
 //     for (const anchor of anchors) {
@@ -206,6 +207,10 @@ const form = document.getElementById('form');
 const image1 = document.getElementById('window-image');
 const image2 = document.getElementById('window-image2');
 const preloader = document.getElementById('preloader');
+const modalButtons = document.querySelectorAll('.btn-calculator');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalDialog = document.getElementById('modal-dialog');
+const modalClose = document.getElementById('modal-close');
 
 const calculateWindowPrice = (height, width, isTripleGlazed, color) => {
   const basePrice = 1800;
@@ -238,7 +243,7 @@ const hidePreloader = () => {
   preloader.style.display = 'none';
 };
 
-const handleSubmit = async (event) => {
+async function handleSubmit(event) {
   event.preventDefault();
   const height = heightInput.value;
   const width = widthInput.value;
@@ -249,7 +254,7 @@ const handleSubmit = async (event) => {
   const price = calculateWindowPrice(height, width, isTripleGlazed, color);
   resultDiv.textContent = `Предварительная цена: ${price.toFixed(2)} рублей`;
   hidePreloader();
-};
+}
 
 const handleCheckboxChange = () => {
   if (!tripleGlazedCheckbox.checked) {
@@ -261,12 +266,23 @@ const handleCheckboxChange = () => {
   }
 };
 
-image2.style.display = 'none';
-
 form.addEventListener('submit', handleSubmit);
 tripleGlazedCheckbox.addEventListener('change', handleCheckboxChange);
 
-// Стили прелоадера
+modalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    modalOverlay.classList.add('visible');
+    modalDialog.classList.add('visible');
+    document.body.classList.add('modal-open');
+  });
+});
+
+modalClose.addEventListener('click', () => {
+  modalOverlay.classList.remove('visible');
+  modalDialog.classList.remove('visible');
+  document.body.classList.remove('modal-open');
+});
+
 preloader.style.display = 'none';
 preloader.style.position = 'absolute';
 preloader.style.left = '50%';
@@ -287,25 +303,6 @@ const rotatingAnimation = `@keyframes rotating { ${rotatingKeyframes} }`;
 const style = document.createElement('style');
 style.innerHTML = rotatingAnimation;
 document.head.appendChild(style);
-
-
-const modalButton = document.getElementById('modal-button');
-const modalOverlay = document.getElementById('modal-overlay');
-const modalDialog = document.getElementById('modal-dialog');
-const modalClose = document.getElementById('modal-close');
-
-modalButton.addEventListener('click', () => {
-  modalOverlay.classList.add('visible');
-  modalDialog.classList.add('visible');
-  document.body.classList.add('modal-open');
-});
-
-modalClose.addEventListener('click', () => {
-  modalOverlay.classList.remove('visible');
-  modalDialog.classList.remove('visible');
-  document.body.classList.remove('modal-open');
-});
-
 
 const button = document.getElementById('menu-toggle');
 const openCubes = Array.from(document.querySelectorAll('#open-cubes rect'));
