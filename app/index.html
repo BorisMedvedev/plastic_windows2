@@ -84,7 +84,7 @@
 
     <div class="phone">
       <a class="phone__link" href="tel:+79203432464">+7 (920) 343 24 64</a>
-      <button class="phone__btn btn-reset">
+      <button class="phone__btn btn-reset open-btn">
         Написать директору
       </button>
     </div>
@@ -273,7 +273,7 @@
             <h2 class="title">Миссия компании</h2>
             <p class="swiper__descr">Наша миссия - довольные клиенты, готовые
               нас рекомендовать!</p>
-            <button class="btn-reset btn-site">Заказать звонок</button>
+            <button class="btn-reset btn-site open-btn">Заказать звонок</button>
           </div>
         </div>
         <div class="swiper-slide">
@@ -284,7 +284,7 @@
             <h2 class="title">Миссия компании</h2>
             <p class="swiper__descr">Наша миссия - довольные клиенты, готовые
               нас рекомендовать!</p>
-            <button class="btn-reset btn-site">Заказать звонок</button>
+            <button class="btn-reset btn-site open-btn">Заказать звонок</button>
           </div>
         </div>
         <div class="swiper-slide">
@@ -295,7 +295,7 @@
             <h2 class="title">Миссия компании</h2>
             <p class="swiper__descr">Наша миссия - довольные клиенты, готовые
               нас рекомендовать!</p>
-            <button class="btn-reset btn-site">Заказать звонок</button>
+            <button class="btn-reset btn-site open-btn">Заказать звонок</button>
           </div>
         </div>
         <div class="swiper-slide">
@@ -306,7 +306,7 @@
             <h2 class="title">Миссия компании</h2>
             <p class="swiper__descr">Наша миссия - довольные клиенты, готовые
               нас рекомендовать!</p>
-            <button class="btn-reset btn-site">Заказать звонок</button>
+            <button class="btn-reset btn-site open-btn">Заказать звонок</button>
           </div>
         </div>
         <div class="swiper-slide">
@@ -317,7 +317,7 @@
             <h2 class="title">Миссия компании</h2>
             <p class="swiper__descr">Наша миссия - довольные клиенты, готовые
               нас рекомендовать!</p>
-            <button class="btn-reset btn-site">Заказать звонок</button>
+            <button class="btn-reset btn-site open-btn">Заказать звонок</button>
           </div>
         </div>
       </div>
@@ -386,7 +386,7 @@
 
           Короткая справка о результатах деятельности Компании в Иванове:
         </p>
-        <button class="btn-reset btn-site company__btn">Заказать замер</button>
+        <button class="btn-reset btn-site company__btn open-btn">Заказать замер</button>
       </div>
 
       <ul class="company__list list-reset">
@@ -646,7 +646,7 @@
         письмо нажав Подробнее
       </p>
 
-      <button class="btn-reset btn-site">Написать директору</button>
+      <button class="btn-reset btn-site open-btn">Написать директору</button>
     </div>
 
     <div class="director__images">
@@ -692,7 +692,7 @@
 
           </li>
           <li class="footer__sublitem">
-            <a class="footer__link" href="#">Написать директору</a>
+            <a class="footer__link open-btn" href="#">Написать директору</a>
 
           </li>
 
@@ -769,7 +769,7 @@
 
           </li>
           <li class="footer__sublitem">
-            <a class="footer__link" href="#">Заказать звонок
+            <a class="footer__link open-btn" href="#">Заказать звонок
             </a>
 
           </li>
@@ -828,13 +828,6 @@
         <label class="form-label" class="form-check-label" for="triple-glazed">Окно
           с тройным
           остеклением</label><br>
-        <!-- <img id="window-image"
-          src="./images/alyuminievye-okna-photo-big-1.png" width="120"
-          height="120" alt>
-        <img id="window-image2"
-          src="./images/1651039906_55-na-dache-pro-p-odnokamernii-steklopaket-kak-viglyadit-fot-64-3.jpg"
-          width="120"
-          height="120" alt> -->
         <button class="modal__btn btn btn-primary" type="submit">Рассчитать
           стоимость</button>
       </form>
@@ -842,6 +835,28 @@
     </div>
   </div>
   <div id="preloader"></div>
+</div>
+
+   <div class="modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close-btn">&times;</button>
+    <form>
+      <label for="name"></label>
+      <input type="text" id="name" name="name" required
+        placeholder="Введите ФИО">
+      <label for="email"></label>
+      <input type="email" id="email" name="email" required
+        placeholder="Введите email">
+      <label for="phone"></label>
+      <input type="tel" id="phone" name="phone" required
+        placeholder="Введите телефон">
+      <label for="address"></label>
+      <textarea id="address" name="address" rows="5" cols="30" required
+        placeholder="Введите  адрес"></textarea>
+      <button class="btn-site" type="submit">Отправить</button>
+    </form>
+  </div>
 </div>
 
 </div>

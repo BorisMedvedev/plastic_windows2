@@ -353,3 +353,37 @@ button.addEventListener('click', (e) => {
     }, 1300 + length * 10);
   }
 });
+
+
+const modal = document.querySelector('.modal');
+const openButtons = document.querySelectorAll('.open-btn');
+const overlay = document.querySelector('.modal-overlay');
+const closeButtons = document.querySelectorAll('.modal-close-btn'); 
+
+const openModal = (event) => {
+  event.preventDefault();
+  modal.classList.add('open');
+  document.body.classList.add('modal-open'); // добавление класса к body
+};
+
+const closeModal = () => {
+  modal.classList.remove('open');
+  document.body.classList.remove('modal-open'); // удаление класса с body
+};
+
+for (const button of openButtons) {
+  button.addEventListener('click', openModal);
+}
+
+overlay.addEventListener('click', closeModal);
+
+for (const button of closeButtons) {
+  button.addEventListener('click', closeModal);
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+
