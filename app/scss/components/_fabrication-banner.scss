@@ -1,54 +1,129 @@
 .fabrication {
   padding: 180px 0 90px;
   background-color: #f0f4f8;
+}
 
-  .crumbs {
-    margin-bottom: 30px;
-    font-size: 18px;
-  }
-  .crumbs a {
-    color: #2f80ed;
-  }
+.fabrication .crumbs {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
 
-  &__banner {
-    position: relative;
-  }
+.fabrication .crumbs a {
+  color: #2f80ed;
+}
 
-  &__content {
-    max-width: 450px;
-    position: absolute;
-    top: 50%;
+.fabrication__banner {
+  position: relative;
+}
+
+.fabrication__content {
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  z-index: 100;
+}
+
+.fabrication__banner-title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 90%;
+  color: #ffffff;
+}
+
+.fabrication__banner-descr {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 115%;
+  color: #ffffff;
+}
+
+.fabrication__banner-btn {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid transparent;
+}
+
+.fabrication__banner-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  .fabrication {
+    padding: 120px 0 60px;
+  }
+  .fabrication .crumbs {
+    font-size: 16px;
+  }
+  .fabrication__banner-title {
+    font-size: 40px;
+  }
+  .fabrication__banner-descr {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fabrication {
+    padding: 90px 0;
+  }
+  .fabrication .crumbs {
+    font-size: 14px;
+  }
+  .fabrication__banner {
+    height: 300px;
+  }
+  .fabrication__content {
+    max-width: 100%;
+    text-align: center;
+    top: 60%;
     transform: translateY(-50%);
-    left: 50px;
-    z-index: 100;
+    left: 0;
   }
-
-  &__banner-title {
-    margin: 0;
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 90%;
-    color: #ffffff;
+  .fabrication__banner-title {
+    font-size: 36px;
+    margin-bottom: 20px;
   }
-
-  &__banner-descr {
-    margin: 0;
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 115%;
-    color: #ffffff;
+  .fabrication__banner-descr {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
+  .fabrication__banner-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
 
-  &__banner-btn {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid transparent;
-
-    &:hover {
-      border-color: #fff;
-      color: #fff;
-    }
+@media screen and (max-width: 576px) {
+  .fabrication {
+    padding: 90px 0 0;
+  }
+  .fabrication .crumbs {
+    font-size: 12px;
+  }
+  .fabrication__banner {
+    height: 250px;
+  }
+  .fabrication__content {
+    max-width: 90%;
+    top: 45%;
+  }
+  .fabrication__banner-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .fabrication__banner-descr {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .fabrication__banner-btn {
+    font-size: 14px;
+    padding: 8px 20px;
   }
 }
