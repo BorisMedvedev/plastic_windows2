@@ -1,0 +1,25 @@
+.stages {
+  padding: 90px 0;
+  background-color: #f0f3f6;
+  &__item {
+    padding: 32px;
+    display: flex;
+    max-width: 638px;
+    background: #ffffff;
+    border-radius: 20px;
+  }
+
+  &__item-img {
+    margin-right: 32px;
+    display: block;
+    width: 305px;
+    height: 242px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  &__item-img--01 {
+    background-image: url("../images/states-1.png");
+  }
+}
