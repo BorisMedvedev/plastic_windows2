@@ -1,5 +1,4 @@
 
-window.history.pushState('', '', window.location.href.slice(0, -5));
 // document.addEventListener('DOMContentLoaded', () => {
 //   const navigation = () => {
 //     const anchors = document.querySelectorAll(
@@ -422,22 +421,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Получаем все ссылки на странице
-const links = document.querySelectorAll('a');
+// // Получаем все ссылки на странице
+// const links = document.querySelectorAll('a');
 
-// Добавляем слушатели событий на все ссылки
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener('click', function(event) {
-    // Отменяем стандартное действие ссылки
-    event.preventDefault();
+// // Добавляем слушатели событий на все ссылки
+// for (let i = 0; i < links.length; i++) {
+//   links[i].addEventListener('click', function(event) {
+//     // Отменяем стандартное действие ссылки
+//     event.preventDefault();
 
-    // Получаем адрес страницы, куда нужно перейти
-    const href = this.getAttribute('href');
+//     // Получаем адрес страницы, куда нужно перейти
+//     const href = this.getAttribute('href');
 
-    // Добавляем задержку перед переходом
-    setTimeout(() => {
-      // Осуществляем переход на другую страницу
-      window.location.href = href;
-    }, 500);
-  });
-}
+//     // Добавляем задержку перед переходом
+//     setTimeout(() => {
+//       // Осуществляем переход на другую страницу
+//       window.location.href = href;
+//     }, 500);
+//   });
+// }
