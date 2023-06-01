@@ -475,4 +475,3 @@ buttons.forEach(button => {
 });
 
 
-window.history.pushState('', '', window.location.href.slice(0, -5));
