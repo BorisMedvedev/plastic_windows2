@@ -2,6 +2,10 @@
   padding: 20px 0;
   background-color: #fff;
 
+  @include r(1440) {
+    padding: 15px 0;
+  }
+
   @include r(1024) {
     padding: 10px 0;
   }

@@ -145,6 +145,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 40;
+
+  @include r(1440) {
+    max-width: 1050px;
+  }
 }
 
 .swiper-pagination {

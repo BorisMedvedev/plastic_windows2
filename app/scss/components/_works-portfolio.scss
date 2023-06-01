@@ -33,7 +33,7 @@
     }
   }
 
-  .filter-btn.filter-btn--active {
+  .filter-btn.mixitup-control-active {
     background-color: #2f80ed;
     color: #fff;
   }
@@ -43,5 +43,9 @@
     justify-content: center;
     gap: 32px;
     flex-wrap: wrap;
+
+    &__item {
+      max-width: 250px;
+    }
   }
 }

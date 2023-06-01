@@ -122,6 +122,21 @@ const swiperNew = new Swiper('.mySwiper', {
       spaceBetween: 50,
       centeredSlides: false,
     },
+    1340: {
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+      centeredSlides: true,
+    },
+    1440: {
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+      centeredSlides: true,
+    },
+    1560: {
+      slidesPerView: 1.5,
+      spaceBetween: 50,
+      centeredSlides: true,
+    },
     1880: {
       slidesPerView: 1.5,
       spaceBetween: 80,
@@ -442,3 +457,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // }
 
 
+const mixer = mixitup('.works__content');
+
+Fancybox.bind('[data-filter="gallery"]', {
+  caption(carousel, slide) {
+    return `${slide.index + 1} / ${carousel.slides.length} ${slide.caption}`;
+  },
+});
+
+const buttons = document.querySelectorAll('.filter-btn');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('filter-btn--active'));
+    button.classList.add('filter-btn--active');
+  });
+});
