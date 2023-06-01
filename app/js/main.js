@@ -473,3 +473,6 @@ buttons.forEach(button => {
     button.classList.add('filter-btn--active');
   });
 });
+
+
+window.history.pushState('', '', window.location.href.slice(0, -5));

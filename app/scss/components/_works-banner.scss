@@ -127,18 +127,19 @@
     font-size: 12px;
   }
   .works-banner__banner {
-    height: 350px;
+    height: 320px;
   }
   .works-banner__content {
-    max-width: 93%;
+    width: 320px;
     top: 52%;
   }
   .works-banner__banner-title {
-    font-size: 36px;
+    width: 100%;
+    font-size: 32px;
     margin-bottom: 15px;
   }
   .works-banner__banner-descr {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 15px;
   }
   .works-banner__banner-btn {

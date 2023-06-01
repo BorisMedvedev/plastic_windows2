@@ -112,6 +112,10 @@ img {
   font-weight: 700;
   font-size: 44px;
   line-height: 100%;
+
+  @include r(576) {
+    font-size: 32px;
+  }
 }
 
 .noselect {

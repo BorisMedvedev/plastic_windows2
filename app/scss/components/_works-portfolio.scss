@@ -31,6 +31,11 @@
     &:active {
       box-shadow: none;
     }
+
+    @include r(440) {
+      width: 100%;
+      font-size: 18px;
+    }
   }
 
   .filter-btn.mixitup-control-active {
