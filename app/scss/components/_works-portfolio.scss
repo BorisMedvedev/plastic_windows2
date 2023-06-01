@@ -1,0 +1,47 @@
+.works {
+  padding: 90px 0;
+
+  &__title {
+    max-width: 400px;
+    margin: 0 auto 50px;
+  }
+  .filter {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #d7efff;
+    border-radius: 6px;
+  }
+
+  .filter-btn {
+    margin: 0;
+    padding: 10px;
+    width: 25%;
+    height: 60px;
+    background-color: transparent;
+    color: #000;
+    font-weight: 700;
+    font-size: 24px;
+
+    &:focus {
+      box-shadow: none;
+    }
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  .filter-btn.filter-btn--active {
+    background-color: #2f80ed;
+    color: #fff;
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+}
