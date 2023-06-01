@@ -31,6 +31,10 @@
     margin-bottom: 16px;
     font-size: 18px;
     line-height: 22px;
+
+    @include r(560) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -125,6 +129,10 @@
   padding: 215px 0 20px 0;
   position: relative;
   background-color: #f0f4f8;
+
+  @include r(560) {
+    padding: 130px 0 20px 0;
+  }
 }
 
 .wrapper {
@@ -133,7 +141,7 @@
   justify-content: space-between;
   max-width: 1300px;
   width: 100%;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 40;
