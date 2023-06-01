@@ -14,6 +14,13 @@
 
 .fabrication__banner {
   position: relative;
+  background-image: url("../images/product.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  height: 520px;
+  overflow: hidden;
 }
 
 .fabrication__content {
@@ -111,7 +118,7 @@
     height: 250px;
   }
   .fabrication__content {
-    max-width: 90%;
+    max-width: 95%;
     top: 45%;
   }
   .fabrication__banner-title {

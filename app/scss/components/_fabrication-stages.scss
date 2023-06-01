@@ -72,6 +72,33 @@
   &__item-img--01 {
     background-image: url("../images/states-1.png");
   }
+  &__item-img--02 {
+    background-image: url("../images/states-2.png");
+  }
+  &__item-img--03 {
+    background-image: url("../images/states-3.png");
+  }
+  &__item-img--04 {
+    background-image: url("../images/states-4.png");
+  }
+  &__item-img--05 {
+    background-image: url("../images/states-5.png");
+  }
+  &__item-img--06 {
+    background-image: url("../images/states-6.png");
+  }
+  &__item-img--07 {
+    background-image: url("../images/states-7.png");
+  }
+  &__item-img--08 {
+    background-image: url("../images/states-8.png");
+  }
+  &__item-img--09 {
+    background-image: url("../images/states-9.png");
+  }
+  &__item-img--10 {
+    background-image: url("../images/states-10.png");
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -117,5 +144,9 @@
   }
   .stages__descr {
     font-size: 14px;
+  }
+
+  .stages__item-img {
+    width: 100%;
   }
 }
