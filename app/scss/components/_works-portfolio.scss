@@ -54,7 +54,7 @@
     flex-wrap: wrap;
 
     &__item {
-      max-width: 250px;
+      max-width: 23%;
       @include r(576) {
         max-width: 100%;
       }
