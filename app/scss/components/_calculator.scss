@@ -35,10 +35,10 @@ body.modal-open {
   animation-name: slide-in;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
-  transform: translateY(-50%) translateX(-50%) scale(0.7);
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
   background-color: white;
   padding: 50px 50px;
   border-radius: 12px;
@@ -52,8 +52,9 @@ body.modal-open {
 }
 
 #modal-dialog.visible {
-  transform: translateY(-50%) translateX(-50%) scale(1);
-  /* Изменяем значение свойства opacity и pointer-events */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
   opacity: 1;
   pointer-events: auto;
 

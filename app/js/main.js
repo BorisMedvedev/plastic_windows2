@@ -475,3 +475,21 @@ buttons.forEach(button => {
 });
 
 
+const links = document.querySelectorAll('.link');
+
+// Добавляем слушатели событий на все ссылки
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', function (event) {
+    // Отменяем стандартное действие ссылки
+    event.preventDefault();
+
+    // Получаем адрес страницы, куда нужно перейти
+    const href = this.getAttribute('href');
+
+    // Добавляем задержку перед переходом
+    setTimeout(() => {
+      // Осуществляем переход на другую страницу
+      window.location.href = href;
+    }, 5000);
+  });
+}
